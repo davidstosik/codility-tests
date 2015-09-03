@@ -1,4 +1,5 @@
 def solution(a)
+  return -2 if a.count < 2
 
   # mergesort is O(N*log(N))
   sorted = mergesort a
