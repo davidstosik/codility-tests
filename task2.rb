@@ -18,6 +18,8 @@ def recurse_swap(s, t)
         recurse_swap(s[1..-1], t[1..-1])
     elsif s[0] == t[1] && s[1] == t[0]
         "SWAP #{s[0]} #{s[1]}"
+    else
+        'IMPOSSIBLE'
     end
 end
 
@@ -26,6 +28,8 @@ def recurse_delete(s, t)
         recurse_delete(s[1..-1], t[1..-1])
     elsif s[1..-1] == t
         "DELETE #{s[0]}"
+    else
+        'IMPOSSIBLE'
     end
 end
 
@@ -34,5 +38,7 @@ def recurse_insert(s, t)
         recurse_insert(s[1..-1], t[1..-1])
     elsif t[0] + s == t
         "INSERT #{t[0]}"
+    else
+        'IMPOSSIBLE'
     end
 end
